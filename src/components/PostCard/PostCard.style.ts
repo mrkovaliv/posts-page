@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 interface IWrapperProps {
   greyscale: boolean;
@@ -13,7 +13,7 @@ export const Wrapper = styled.div<IWrapperProps>`
   flex-direction: column;
   justify-content: space-between;
 
-  filter: ${({ greyscale }) => (greyscale ? 'grayscale(1)' : 'none')};
+  filter: ${({ greyscale }) => (greyscale ? "grayscale(1)" : "none")};
 `;
 
 export const Title = styled.div`

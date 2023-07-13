@@ -1,6 +1,6 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore } from "@reduxjs/toolkit";
 
-import rootReducer from './rootReducer';
+import rootReducer from "./rootReducer";
 
 // const composeEnhancers =
 //   typeof window === "object" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__

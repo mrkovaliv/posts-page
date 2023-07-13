@@ -1,11 +1,11 @@
-import { FC } from 'react';
-import { useSelector } from 'react-redux';
+import { FC } from "react";
+import { useSelector } from "react-redux";
 
-import { useActions } from '../../hooks/useActions';
-import { IPostData } from '../../types/post';
-import { selectIsExistPost } from '../../redux/favorites/selectors';
+import { useActions } from "../../hooks/useActions";
+import { IPostData } from "../../types/post";
+import { selectIsExistPost } from "../../redux/favorites/selectors";
 
-import { Wrapper, Title, BodyText, Button } from './PostCard.style';
+import { Wrapper, Title, BodyText, Button } from "./PostCard.style";
 
 interface IPostCardProps {
   post: IPostData;
@@ -20,7 +20,9 @@ export const PostCard: FC<IPostCardProps> = ({ post }) => {
     <Wrapper greyscale={isExistPost}>
       <Title>{post.title}</Title>
       <BodyText>{post.body}</BodyText>
-      <Button onClick={() => toggleFavorites(post)}>{isExistPost ? 'Remove from favorite' : 'Add to favorite'}</Button>
+      <Button onClick={() => toggleFavorites(post)}>
+        {isExistPost ? "Remove from favorite" : "Add to favorite"}
+      </Button>
     </Wrapper>
   );
 };

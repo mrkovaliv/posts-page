@@ -1,7 +1,7 @@
-import { Header } from './components/Header';
-import { Posts } from './pages/Posts';
+import { Header } from "./components/Header";
+import { Posts } from "./pages/Posts";
 
-import { Wrapper } from './App.style';
+import { Wrapper } from "./App.style";
 
 const App = () => {
   return (

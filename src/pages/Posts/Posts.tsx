@@ -1,8 +1,8 @@
-import { PostCard } from '../../components/PostCard';
+import { PostCard } from "../../components/PostCard";
 
-import { usePostsQuery } from '../../hooks/usePostsQuery';
+import { usePostsQuery } from "../../hooks/usePostsQuery";
 
-import { Wrapper } from './Posts.style';
+import { Wrapper } from "./Posts.style";
 
 export const Posts = () => {
   const { data, isLoading, isError } = usePostsQuery();
@@ -15,5 +15,9 @@ export const Posts = () => {
     return <div>Error!</div>;
   }
 
-  return <Wrapper>{data?.map(post => <PostCard key={post.id} post={post} />)}</Wrapper>;
+  return (
+    <Wrapper>
+      {data?.map((post) => <PostCard key={post.id} post={post} />)}
+    </Wrapper>
+  );
 };
